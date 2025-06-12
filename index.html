@@ -18,9 +18,8 @@
             background-size: 400% 400%;
             height: 100vh;
             display: flex;
-            align-items: center;
-            justify-content: center;
-            align-content: center;
+            align-items: center; /* Centraliza verticalmente */
+            justify-content: center; /* Centraliza horizontalmente */
             overflow: hidden;
             position: relative;
             animation: backgroundGradient 2s ease infinite;
@@ -41,12 +40,13 @@
         }
 
         .card-container {
-            width: 90vw;
+            width: 90vw; /* Garante que o container ocupe 90% da largura da viewport */
             max-width: 400px;
             perspective: 1000px;
             position: relative;
             z-index: 2;
             animation: float 3s ease-in-out;
+            /* Já está centralizado pelo body, então não precisa de margin: auto aqui */
         }
 
         /* Animação de flutuação */
@@ -66,9 +66,9 @@
 
         /* Estilo do cartão principal */
         .card {
-            width: 90%;
+            width: 100%; /* Ocupa 100% da largura do seu container (.card-container) */
             height: 120vw;
-            justify-self: center;
+            /* remover justify-self: center; daqui */
             /* proporção flexível com base na largura da tela */
             max-height: 90vh;
             /* garante que não passe da altura da tela */
@@ -151,7 +151,7 @@
         }
 
         .card-front p {
-            font-size: 1.1em;
+            font-size: 1.3em;
             font-weight: bold;
             color: #ffffff;
             margin-top: 10px;
@@ -172,6 +172,7 @@
             from {
                 width: 0
             }
+
             to {
                 width: 90%
             }
@@ -183,6 +184,7 @@
             to {
                 border-color: transparent
             }
+
             50% {
                 border-color: #ffffff;
             }
@@ -260,10 +262,6 @@
                 <div class="image">
                     <img src="src/frente.png" alt="frente">
                 </div>
-                <!-- <h1>Feliz dia das namoradas!</h1>
-                <p class="frase-fofa" style="color: white;"><i>Você é o meu sol entrando pela janela…</i></p>
-                <br>
-                <div class="coração-extra">❤️✨☀️</div> -->
                 <p>Para o meu amor, Amanda!</p>
                 <i style="color: white;">Você é o meu sol entrando pela janela…</i>
                 <div class="coração-extra">❤️☀️</div>
