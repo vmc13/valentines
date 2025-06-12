@@ -46,7 +46,6 @@
             position: relative;
             z-index: 2;
             animation: float 3s ease-in-out;
-            /* Já está centralizado pelo body, então não precisa de margin: auto aqui */
         }
 
         /* Animação de flutuação */
@@ -68,7 +67,6 @@
         .card {
             width: 100%; /* Ocupa 100% da largura do seu container (.card-container) */
             height: 120vw;
-            /* remover justify-self: center; daqui */
             /* proporção flexível com base na largura da tela */
             max-height: 90vh;
             /* garante que não passe da altura da tela */
@@ -135,35 +133,29 @@
         .card-front .image {
             width: 100%;
             height: 60%;
-            /* background: #ffddc1; */
             border-radius: 8px;
             margin-bottom: 8px;
             overflow: hidden;
-            /* Garante que a imagem não ultrapasse */
         }
 
         .card-front .image img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: cover; /* Garante que o GIF preencha o container sem distorcer */
             border-radius: 8px;
             display: block;
         }
 
         .card-front p {
-            font-size: 1.3em;
+            font-size: 1.1em;
             font-weight: bold;
             color: #ffffff;
             margin-top: 10px;
             overflow: hidden;
-            /* Para o efeito de digitação */
             white-space: nowrap;
-            /* Impede que o texto quebre linha */
             border-right: .15em solid #ffffff;
-            /* Cursor de digitação */
             animation: typing 3s steps(40, end) forwards, blink-caret .75s step-end infinite;
             width: 0;
-            /* Começa com largura zero para o efeito de digitação */
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
         }
 
@@ -204,7 +196,6 @@
         .card-back .image {
             width: 100%;
             height: 50%;
-            /* background: #ffe0b2; */
             border-radius: 8px;
             margin-bottom: 18px;
             overflow: hidden;
@@ -260,7 +251,7 @@
         <div class="card" id="card">
             <div class="card-face card-front">
                 <div class="image">
-                    <img src="src/frente.png" alt="frente">
+                    <img src="src/romantic.gif" alt="gif da frente do cartão">
                 </div>
                 <p>Para o meu amor, Amanda!</p>
                 <i style="color: white;">Você é o meu sol entrando pela janela…</i>
